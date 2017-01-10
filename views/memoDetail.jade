@@ -1,0 +1,29 @@
+extends layout
+
+block header
+  div.top-bar
+    div.menu-text ExpressMemo
+
+block content
+  div.row
+    h1= pageTitle
+    hr
+    div.small-12.columns
+      table
+        tr
+          td
+            strong タイトル
+          td= targetMemo.title
+        tr
+          td
+            strong メモ本文
+          td= targetMemo.memo
+        tr
+          td
+            strong 作成日
+          td= targetMemo.created
+        tr
+          td
+            strong 更新日
+          td= targetMemo.modified
+      a(href="/").secondary.button 戻る

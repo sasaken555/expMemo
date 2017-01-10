@@ -1,0 +1,23 @@
+extends layout
+
+block header
+  div.top-bar
+    div.menu-text ExpressMemo
+
+block content
+  div.row
+    div.small-12.columns
+      h1= pageTitle
+      hr
+      div.callout.alert
+        p 本当にこのメモを削除しますか？
+      table
+        tr
+          td タイトル
+          td= targetMemo.title
+        tr
+          td メモ本文
+          td= targetMemo.memo
+      hr
+      button(type="submit").button.alert 削除
+      a(href="/").secondary.button 戻る

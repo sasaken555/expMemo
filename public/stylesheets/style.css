@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.button {
+  box-shadow: 0 0 5px #c0c0c0;
 }
 
-a {
-  color: #00B7FF;
+.button:hover {
+  box-shadow: 0 0 15px #c0c0c0;
 }

@@ -1,5 +1,30 @@
 extends layout
 
+block header
+  div.top-bar
+    div.menu-text ExpressMemo
+
 block content
-  h1= title
-  p Welcome to #{title}
+  div.row
+    h1= pageTitle
+    div.small-12.columns
+      a(href="/new").button 新規作成
+      table
+        thead
+          tr
+            th タイトル
+            th 作成日
+            th 更新日
+            th
+            th
+        tbody
+          - each memo in memoItems
+            tr
+              td
+                a(href="/#{memo.id}") #{memo.title}
+              td= memo.created
+              td= memo.modified
+              td
+                a(href="/edit/#{memo.id}").button 編集
+              td
+                a(href="/delete/#{memo.id}").alert.button 削除

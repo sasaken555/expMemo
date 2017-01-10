@@ -1,0 +1,18 @@
+extends layout
+
+block header
+  div.top-bar
+    div.menu-text ExpressMemo
+
+block content
+  div.row
+    div.small-12.columns
+      h1= pageTitle
+      hr
+      form(method="post", action="/edit/#{targetMemo.id}")
+        label タイトル
+          input(type="text", name="title", placeholder="#{targetMemo.title}")
+        label メモ本文
+          input(type="text", name="memo", placeholder="#{targetMemo.memo}")
+        button(type="submit").button 更新
+        a(href="/").secondary.button 戻る
