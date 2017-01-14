@@ -19,5 +19,6 @@ block content
           td メモ本文
           td= targetMemo.memo
       hr
-      button(type="submit").button.alert 削除
-      a(href="/").secondary.button 戻る
+      form(method="post", action="/delete/#{targetMemo.id}")
+        button(type="submit").button.alert 削除
+        a(href="/").secondary.button 戻る

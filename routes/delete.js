@@ -28,9 +28,16 @@ router.get('/:memoId', function(req, res, next) {
 
 /* 削除処理 */
 router.post('/:memoId', function(req, res, next) {
-  var memoId = req.param.memoId;
-  console.log(`memoId: ${memoId}`);
-  res.redirect('/');
+  var memoId = req.params.memoId;
+
+  // SQLの作成
+  var sql = `DELETE FROM memo WHERE id = ${memoId}`;
+
+  // 削除実行
+  connection.query(sql, function(error, results, fields) {
+    if (error) throw error;
+    res.redirect('/');
+  });
 });
 
 module.exports = router;
