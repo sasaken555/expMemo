@@ -8,7 +8,8 @@ var connection = mysql.createConnection({
   user: 'root',
   password: 'IrukaAdmin555',
   database: 'memopad',
-  port: 3306
+  port: 3306,
+  dateStrings: true
 });
 
 /* 削除確認画面表示処理 */
