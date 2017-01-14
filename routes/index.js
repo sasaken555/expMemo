@@ -9,7 +9,8 @@ var connection = mysql.createConnection({
   password: 'IrukaAdmin555',
   database: 'memopad',
   port: 3306,
-  dateStrings: true
+  dateStrings: true,
+  timezone: 'jst'
 });
 
 /* 一覧画面表示処理 */

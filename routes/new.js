@@ -9,8 +9,26 @@ var connection = mysql.createConnection({
   password: 'IrukaAdmin555',
   database: 'memopad',
   port: 3306,
-  dateStrings: true
+  dateStrings: true,
+  timezone: 'jst'
 });
+
+
+/*
+  日本時間返却処理
+  mysqlJpTime(date)
+  date: Date型のUTC時間の値
+*/
+function mysqlJpTime() {
+  // UTC時間
+  var date = new Date();
+  // UTC時間を日本時間に修正
+  date.setTime(date.getTime() + 32400000);
+  // JSのDate型をMySQLのDateTime型に変換
+  var mysqlJpTime = date.toISOString().slice(0, 19).replace('T', ' ');
+  return mysqlJpTime;
+}
+
 
 /* 新規登録画面表示処理 */
 router.get('/', function(req, res, next) {
@@ -21,8 +39,14 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   var title = req.body.title;
   var memo = req.body.memo;
-  console.log(`title: ${title}, memo: ${memo}`);
-  res.redirect('/');
+  var createdTime = mysqlJpTime();
+
+  var post = {title: title, memo: memo, created: createdTime};
+  var sql = `INSERT INTO memo SET ?`
+  connection.query(sql, post, function(error, results, fields) {
+    if (error) throw error;
+    res.redirect('/');
+  });
 });
 
 module.exports = router;
