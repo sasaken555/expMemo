@@ -34,7 +34,7 @@ JavaScriptでアプリケーションを作ることの有用性、および得�
 ## 使い方
 コンソールから、以下のコマンドを叩いて必要なファイル・パッケージを入れます
 ```
-$ git clone
+$ git clone git@github.com:sasaken555/expMemo.git
 $ npm install
 ```
 
