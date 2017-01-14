@@ -5,12 +5,14 @@ var router = express.Router();
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'IrukaAdmin555',
+  user: 'EditUser',
+  password: 'EditYourPass',
   database: 'memopad',
   port: 3306,
-  dateStrings: true
+  dateStrings: true,
+  timezone: 'jst'
 });
+
 
 /* 削除確認画面表示処理 */
 router.get('/:memoId', function(req, res, next) {
@@ -25,6 +27,7 @@ router.get('/:memoId', function(req, res, next) {
     res.render('deleteMemo', { pageTitle: 'メモ削除', targetMemo: targetMemo });
   });
 });
+
 
 /* 削除処理 */
 router.post('/:memoId', function(req, res, next) {

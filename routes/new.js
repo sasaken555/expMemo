@@ -5,8 +5,8 @@ var router = express.Router();
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'IrukaAdmin555',
+  user: 'EditUser',
+  password: 'EditYourPass',
   database: 'memopad',
   port: 3306,
   dateStrings: true,
@@ -34,6 +34,7 @@ function mysqlJpTime() {
 router.get('/', function(req, res, next) {
   res.render('newMemo', { pageTitle: '新規メモ作成' });
 });
+
 
 /* 新規登録処理 */
 router.post('/', function(req, res, next) {

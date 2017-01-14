@@ -5,13 +5,14 @@ var router = express.Router();
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'IrukaAdmin555',
+  user: 'EditUser',
+  password: 'EditYourPass',
   database: 'memopad',
   port: 3306,
   dateStrings: true,
   timezone: 'jst'
 });
+
 
 /* 一覧画面表示処理 */
 router.get('/', function(req, res, next) {
@@ -28,6 +29,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { pageTitle: 'メモ一覧', memoItems: memoItems });
   });
 });
+
 
 /* 詳細画面表示処理 */
 // 正規表現(\\d)で /new とルーティングを区別している

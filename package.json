@@ -1,7 +1,8 @@
 {
-  "name": "expmemo",
-  "version": "0.0.0",
-  "private": true,
+  "name": "expMemo",
+  "description": "This is Sample-Memo-App using Express",
+  "version": "1.0.0",
+  "author": "sasaken555",
   "scripts": {
     "start": "node ./bin/www"
   },
