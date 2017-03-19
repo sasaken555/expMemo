@@ -5,7 +5,7 @@
 JavaScriptでアプリケーションを作ることの有用性、および得手不得手を検証します。  
 今回はJavaScriptのWebアプリケーションフレームワークの中で最もシンプルな"Express"を使います。  
 Qiitaに記事書きました  
--> [SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(1)](http://qiita.com/NobiNobiKen/items/900c0403adbad7b843e6)
+-> [SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(1)](http://qiita.com/NobiNobiKen/items/900c0403adbad7b843e6)  
 -> [SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(2)](http://qiita.com/NobiNobiKen/items/2cd0ce8708c76fff0230)
 
 
