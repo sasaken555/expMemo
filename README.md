@@ -4,18 +4,21 @@
 "JavaScriptでWebアプリってどうやって作るのか？"の探求その１。  
 JavaScriptでアプリケーションを作ることの有用性、および得手不得手を検証します。  
 今回はJavaScriptのWebアプリケーションフレームワークの中で最もシンプルな"Express"を使います。  
+Qiitaに記事書きました  
+-> [SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(1)](http://qiita.com/NobiNobiKen/items/900c0403adbad7b843e6)
+-> [SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(2)](http://qiita.com/NobiNobiKen/items/2cd0ce8708c76fff0230)
 
 
 ## 前提
 *やっていること*
 +  Webアプリケーションフレームワークの利用
-+  DB(今回はMySQL)との通信を含むCRUD処理
++  DB(今回はMySQL)との通信を伴うCRUD処理
 
 
 *やっていないこと*
-+ ES6の記法
++ ~~ES6の記法~~ (SQLの部分で変数を外出しするためバッククオートを使用)
 + ORM (O/R マッパー) の利用
-+ NoSQLDB(MongoDBとか)の利用
++ NoSQLDB(ex. MongoDB)の利用
 
 
 *実行環境*  
@@ -43,7 +46,8 @@ $ npm install
 $ npm start
 ```
 
-あとはブラウザから `localhost:3000` を入力すれば一覧画面が立ち上がります！
+あとはブラウザのURLに `localhost:3000` を入力してアクセスすれば、
+一覧画面が立ち上がります！
 
 ## 参考
 + Express 公式
